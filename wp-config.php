@@ -129,11 +129,6 @@ define('WP_SITEURL', 'https://' . getenv( "FRONT_DOOR_HOST" ));
 define('WP_CONTENT_URL', '/wp-content');
 define('DOMAIN_CURRENT_SITE', getenv( "FRONT_DOOR_HOST" ));
 
-//define('WP_HOME', 'https://fd-wordpress-pj.azurefd.net');
-//define('WP_SITEURL', 'https://fd-wordpress-pj.azurefd.net');
-//define('WP_CONTENT_URL', '/wp-content');
-//define('DOMAIN_CURRENT_SITE', 'fd-wordpress-pj.azurefd.net');
-
 /* That's all, stop editing! Happy publishing. */
 
 /** Absolute path to the WordPress directory. */
