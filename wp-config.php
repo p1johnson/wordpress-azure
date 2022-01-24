@@ -123,12 +123,11 @@ define( 'WP_DEBUG', false );
 
 /* Add any custom values between this line and the "stop editing" line. */
 
-//Relative URLs for swapping across app service deployment slots 
-define('WP_HOME', 'http://'. filter_input(INPUT_SERVER, 'HTTP_HOST', FILTER_SANITIZE_STRING));
-define('WP_SITEURL', 'http://'. filter_input(INPUT_SERVER, 'HTTP_HOST', FILTER_SANITIZE_STRING));
+//Confirgure URLs for Front Door 
+define('WP_HOME', 'https://' . getenv( "FRONT_DOOR_HOST" ));
+define('WP_SITEURL', 'https://' . getenv( "FRONT_DOOR_HOST" ));
 define('WP_CONTENT_URL', '/wp-content');
-define('DOMAIN_CURRENT_SITE', filter_input(INPUT_SERVER, 'HTTP_HOST', FILTER_SANITIZE_STRING));
-
+define('DOMAIN_CURRENT_SITE', getenv( "FRONT_DOOR_HOST" ));
 
 /* That's all, stop editing! Happy publishing. */
 
