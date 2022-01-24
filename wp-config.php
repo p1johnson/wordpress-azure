@@ -124,10 +124,10 @@ define( 'WP_DEBUG', false );
 /* Add any custom values between this line and the "stop editing" line. */
 
 //Confirgure URLs for Front Door 
-define('WP_HOME', 'https://' . filter_input(INPUT_ENV, 'FRONT_DOOR_HOST', FILTER_SANITIZE_STRING));
-define('WP_SITEURL', 'https://' . filter_input(INPUT_ENV, 'FRONT_DOOR_HOST', FILTER_SANITIZE_STRING));
+define('WP_HOME', 'https://' . getenv( "FRONT_DOOR_HOST" ));
+define('WP_SITEURL', 'https://' . getenv( "FRONT_DOOR_HOST" ));
 define('WP_CONTENT_URL', '/wp-content');
-define('DOMAIN_CURRENT_SITE', filter_input(INPUT_ENV, 'FRONT_DOOR_HOST', FILTER_SANITIZE_STRING));
+define('DOMAIN_CURRENT_SITE', getenv( "FRONT_DOOR_HOST" ));
 
 //define('WP_HOME', 'https://fd-wordpress-pj.azurefd.net');
 //define('WP_SITEURL', 'https://fd-wordpress-pj.azurefd.net');
